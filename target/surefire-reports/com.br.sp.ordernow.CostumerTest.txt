@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.br.sp.ordernow.CostumerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.438 s <<< FAILURE! - in com.br.sp.ordernow.CostumerTest
+login(com.br.sp.ordernow.CostumerTest)  Time elapsed: 0.318 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<401>
+	at com.br.sp.ordernow.CostumerTest.login(CostumerTest.java:42)
+

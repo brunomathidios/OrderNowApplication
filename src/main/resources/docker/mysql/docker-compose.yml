@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  delivery_mysql:
+    container_name: ordernow_mysql
+    image: mysql
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=order123
+      - MYSQL_DATABASE=ordernow
+      - MYSQL_USER=ordernow
+      - MYSQL_PASSWORD=ordernow
+    volumes:
+      - "./init:/docker-entrypoint-initdb.d"
+
+#sudo docker-compose -f docker-compose.yml up
