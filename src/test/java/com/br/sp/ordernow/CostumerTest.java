@@ -22,17 +22,17 @@ public class CostumerTest {
 	@Autowired
 	private MockMvc mockMvc;
 	
-//	@Test
-//	public void createNewCostumer() throws Exception {
-//		Costumer costumer = new Costumer();
-//		costumer.setNmUser("Anonymous");
-//		costumer.setLoginUser("anonym");
-//		costumer.setPwdUser("123");
-//		this.mockMvc.perform(MockMvcRequestBuilders.post("/costumers/new").content(new Gson().toJson(costumer))
-//			.contentType(MediaType.APPLICATION_JSON)
-//			.accept(MediaType.APPLICATION_JSON))
-//			.andExpect(MockMvcResultMatchers.status().isCreated());
-//	}
+	@Test
+	public void createNewCostumer() throws Exception {
+		Costumer costumer = new Costumer();
+		costumer.setNmUser("Anonymous");
+		costumer.setLoginUser("anonym");
+		costumer.setPwdUser("123");
+		this.mockMvc.perform(MockMvcRequestBuilders.post("/costumers/new").content(new Gson().toJson(costumer))
+			.contentType(MediaType.APPLICATION_JSON)
+			.accept(MediaType.APPLICATION_JSON))
+			.andExpect(MockMvcResultMatchers.status().isCreated());
+	}
 	
 	@Test
 	public void login() throws Exception {
