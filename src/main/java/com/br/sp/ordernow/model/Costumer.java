@@ -1,7 +1,5 @@
 package com.br.sp.ordernow.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name="ODN_USER")
-public class Costumer implements Serializable {
-
-	private static final long serialVersionUID = 1L;
+public class Costumer {
 
 	@Id
 	@Column(name = "ID_USER")
@@ -28,6 +24,9 @@ public class Costumer implements Serializable {
 	@Column(name = "LOGIN_USER")
 	private String loginUser;
 	
+	/**
+	 * The annotation below does not show this property in the ResponseEntity
+	 */
 	@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
 	@Column(name = "PWD_USER")
 	private String pwdUser;

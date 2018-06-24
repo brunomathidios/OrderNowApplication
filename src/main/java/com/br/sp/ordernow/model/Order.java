@@ -28,7 +28,7 @@ public class Order {
 	private Long idRest;
 	
 	@Column(name = "ID_USER")
-	private Long idUser;
+	private Long idCostumer;
 	
 	@Column(name = "IN_STATUS_ORDER")
 	private String inStatusOrder;
@@ -65,12 +65,28 @@ public class Order {
 		this.idRest = idRest;
 	}
 
-	public Long getIdUser() {
-		return idUser;
+	public Long getIdCostumer() {
+		return idCostumer;
 	}
 
-	public void setIdUser(Long idUser) {
-		this.idUser = idUser;
+	public void setIdCostumer(Long idCostumer) {
+		this.idCostumer = idCostumer;
+	}
+
+	public String getFlAval() {
+		return flAval;
+	}
+
+	public void setFlAval(String flAval) {
+		this.flAval = flAval;
+	}
+
+	public Integer getRating() {
+		return rating;
+	}
+
+	public void setRating(Integer rating) {
+		this.rating = rating;
 	}
 
 	public String getInStatusOrder() {
@@ -103,9 +119,9 @@ public class Order {
 		int result = 1;
 		result = prime * result + ((dtOrder == null) ? 0 : dtOrder.hashCode());
 		result = prime * result + ((flAval == null) ? 0 : flAval.hashCode());
+		result = prime * result + ((idCostumer == null) ? 0 : idCostumer.hashCode());
 		result = prime * result + ((idOrder == null) ? 0 : idOrder.hashCode());
 		result = prime * result + ((idRest == null) ? 0 : idRest.hashCode());
-		result = prime * result + ((idUser == null) ? 0 : idUser.hashCode());
 		result = prime * result + ((inStatusOrder == null) ? 0 : inStatusOrder.hashCode());
 		result = prime * result + ((orderProductList == null) ? 0 : orderProductList.hashCode());
 		result = prime * result + ((rating == null) ? 0 : rating.hashCode());
@@ -131,6 +147,11 @@ public class Order {
 				return false;
 		} else if (!flAval.equals(other.flAval))
 			return false;
+		if (idCostumer == null) {
+			if (other.idCostumer != null)
+				return false;
+		} else if (!idCostumer.equals(other.idCostumer))
+			return false;
 		if (idOrder == null) {
 			if (other.idOrder != null)
 				return false;
@@ -140,11 +161,6 @@ public class Order {
 			if (other.idRest != null)
 				return false;
 		} else if (!idRest.equals(other.idRest))
-			return false;
-		if (idUser == null) {
-			if (other.idUser != null)
-				return false;
-		} else if (!idUser.equals(other.idUser))
 			return false;
 		if (inStatusOrder == null) {
 			if (other.inStatusOrder != null)

@@ -26,7 +26,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		    .antMatchers(this.pagesAllowed()).permitAll()
 		    .anyRequest().authenticated()
 		    .and()
-		    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) //clients always send token
+		    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		    .and()
 		    .addFilter(new JWTAuthenticationFilter(this.authenticationManager()))
 		    .addFilter(new JWTAuthorizationFilter(this.authenticationManager()));
@@ -38,7 +38,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	}
 	
 	private String[] pagesAllowed() {
-		//return new String[] { "/costumers/**", "/restaurants/**", "/products/**" };
-		return new String[] { "/costumers/**" };
+		return new String[] { "/login, /costumers/**", "/restaurants/**", "/products/**" };
 	}
 }
