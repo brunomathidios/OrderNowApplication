@@ -38,6 +38,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	}
 	
 	private String[] pagesAllowed() {
-		return new String[] { "/login, /costumers/**", "/restaurants/**", "/products/**" };
+		return new String[] { "/costumers/**", "/restaurants/**", "/products/**" };
 	}
 }

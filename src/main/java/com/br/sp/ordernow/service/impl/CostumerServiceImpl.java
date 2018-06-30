@@ -1,6 +1,7 @@
 package com.br.sp.ordernow.service.impl;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -38,14 +39,13 @@ public class CostumerServiceImpl implements CostumerService, UserDetailsService 
 
 	@Override
 	public Costumer findByLogin(String login) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.costumerDAO.findByLoginUser(login);
 	}
 
 	@Override
 	public Costumer findById(Long idUser) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Costumer> user = this.costumerDAO.findById(idUser);
+		return user.orElse(null);
 	}
 	
 	@Override
