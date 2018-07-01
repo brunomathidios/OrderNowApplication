@@ -1,23 +1,37 @@
 # OrderNowApplication
-*App about food delivery - using microservices*
+*Small project about food delivery features - with Spring Boot + Spark Framework*
 
 ## Getting started
 
-This app has a connection with mysql in a docker image: src/main/resources/docker/mysql
-To start docker image, execute the follow command: 'docker-compose up' at the folder above
-db user: ordernow
-db passwd: ordernow
+It is necessary to have docker installed on your OS.
 
-Tools
-* Spring boot
-* Mysql (docker)
+### Instructions
+
+This project has a connection with **Mysql** in a **Docker** image.
+After cloning it, go to folder *..src/main/resources/docker/mysql* and run the following command to initialize the database:
+* **docker-compose up
+
+To access the database initialized, run the following command in another terminal window:
+* **docker exec -it ordernow_mysql bash**
+Then
+* **mysql -u ordernow -p**
+
+The password can be found at *docker-compose.yml*
+
+### Tools
+* Spring Boot
+* Spark Framework (for microservices)
+* Docker
+* Mysql
 * JPA
 * Hibernate
+* Gson
 * BCryptPasswordEncoder
 * Authentication
-* Gson
+* JUnit
+* MockMvc
 
-Microservices
+### Features (still developing...)
 * Create costumer
 * Create restaurant
 * Find restaurant by id
