@@ -9,14 +9,14 @@ It is necessary to have docker installed on your OS.
 
 This project has a connection with **Mysql** in a **Docker** image.
 After cloning it, go to folder *..src/main/resources/docker/mysql* and run the following command to initialize the database:
-* ** *docker-compose up* **
+* *docker-compose up*
 
 To access the database, run the following command in another terminal window:
-* ** *docker exec -it ordernow_mysql bash* **
+* *docker exec -it ordernow_mysql bash*
 
-Then
+**Then**
 
-* ** *mysql -u ordernow -p* **
+* *mysql -u ordernow -p*
 
 The password can be found at *docker-compose.yml*
 
