@@ -1,5 +1,7 @@
 # OrderNowApplication
-App about food delivery - using microservices
+*App about food delivery - using microservices*
+
+## Getting started
 
 This app has a connection with mysql in a docker image: src/main/resources/docker/mysql
 To start docker image, execute the follow command: 'docker-compose up' at the folder above
