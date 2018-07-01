@@ -1,5 +1,5 @@
 # OrderNowApplication
-*Small project about food delivery features - with Spring Boot + Spark Framework*
+*Small project about food delivery features - with Spring Boot + Docker container (Mysql)*
 
 ## Getting started
 
@@ -26,7 +26,6 @@ To initialize the application, run the class *OrderNowApplication.java* as Java 
 
 ### Tools
 * Spring Boot
-* Spark Framework (for microservices)
 * Docker
 * Mysql
 * JPA
