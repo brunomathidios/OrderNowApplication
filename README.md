@@ -20,6 +20,10 @@ To access the database, run the following command in another terminal window:
 
 The password can be found at *docker-compose.yml*
 
+### Run the application
+
+To initialize the application, run the class *OrderNowApplication.java* as Java application
+
 ### Tools
 * Spring Boot
 * Spark Framework (for microservices)
